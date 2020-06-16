@@ -132,12 +132,12 @@ for (let index = 0; index < sampleArray.length; index++) {
     const newElement = document.createElement('p')
     newElement.append(sampleArray[index])
     mainElement.append(newElement)
-    // const element = array[index];
 }
 
 const kata12Heading = document.createElement('h1')
 kata12Heading.append('Kata 12')
 mainElement.append(kata12Heading)
+
 for (let index = 0; index < sampleArray.length; index++) {
     if (sampleArray[index] % 2 === 0) {
         const newElement = document.createElement('p')
@@ -149,6 +149,7 @@ for (let index = 0; index < sampleArray.length; index++) {
 const kata13Heading = document.createElement('h1')
 kata13Heading.append('Kata 13')
 mainElement.append(kata13Heading)
+
 for (let index = 0; index < sampleArray.length; index++) {
     if (sampleArray[index] % 2 === 1) {
         const newElement = document.createElement('p')
@@ -160,6 +161,7 @@ for (let index = 0; index < sampleArray.length; index++) {
 const kata14Heading = document.createElement('h1')
 kata14Heading.append('Kata 14')
 mainElement.append(kata14Heading)
+
 for (let index = 0; index < sampleArray.length; index++) {
     const counterSqr = sampleArray[index] * sampleArray[index]
     const newElement = document.createElement('p')
@@ -177,7 +179,6 @@ let counter = 1
 let result = 0
 while (counter <= 20) {
     result = result + counter
-
     counter++
 }
 const newElement = document.createElement('p')
@@ -188,9 +189,10 @@ mainElement.append(newElement)
 const kata16Heading = document.createElement('h1')
 kata16Heading.append('Kata 16')
 mainElement.append(kata16Heading)
+
 result = sampleArray.reduce(myFunc)
 function myFunc(total, num) {
-    return total + num;
+    return total + num
 }
 
 
@@ -210,9 +212,7 @@ mainElement.append(kata17Heading)
 
 let smallest = Math.min(...sampleArray)
 
-
-// let smallest = Math.min(sampleArray)
-newKata17 = document.createElement('p')
+let newKata17 = document.createElement('p')
 newKata17.append(smallest)
 mainElement.append(newKata17)
 
@@ -223,8 +223,110 @@ mainElement.append(kata18Heading)
 
 let largest = Math.max(...sampleArray)
 
-
-// let smallest = Math.min(sampleArray)
-newKata18 = document.createElement('p')
+let newKata18 = document.createElement('p')
 newKata18.append(largest)
 mainElement.append(newKata18)
+
+
+const kata19Heading = document.createElement('h1')
+kata19Heading.append('Kata 19')
+mainElement.append(kata19Heading)
+
+let rectangleCounter1 = 1
+while (rectangleCounter1 <= 20) {
+    const rectangle1 = document.createElement('div')
+    rectangle1.className = 'rectangle'
+    rectangle1.style.background = 'gray'
+    rectangle1.style.height = '20px'
+    rectangle1.style.width = '100px'
+    rectangle1.style.margin = '2px'
+
+    mainElement.append(rectangle1)
+
+    rectangleCounter1++
+}
+
+const kata20Heading = document.createElement('h1')
+kata20Heading.append('Kata 20')
+mainElement.append(kata20Heading)
+
+let rectangleCounter2 = 105
+
+while (rectangleCounter2 <= 200) {
+    const rectangle2 = document.createElement('div')
+    rectangle2.className = 'rectangle'
+    rectangle2.style.background = 'gray'
+    rectangle2.style.height = '20px'
+    rectangle2.style.width = rectangleCounter2 + 'px'
+    rectangle2.style.margin = '2px'
+
+    mainElement.append(rectangle2)
+    rectangleCounter2 += 5
+}
+
+const kata21Heading = document.createElement('h1')
+kata21Heading.append('Kata 21')
+mainElement.append(kata21Heading)
+
+for (let index = 0; index < sampleArray.length; index++) {
+    const rectangle3 = document.createElement('div')
+    rectangle3.className = 'rectangle'
+    rectangle3.style.background = 'gray'
+    rectangle3.style.height = '20px'
+    rectangle3.style.width = sampleArray[index] + 'px'
+    rectangle3.style.margin = '2px'
+
+    mainElement.append(rectangle3)
+}
+
+const kata22Heading = document.createElement('h1')
+kata22Heading.append('Kata 22')
+mainElement.append(kata22Heading)
+
+for (let index = 0; index < sampleArray.length; index++) {
+
+    if (index % 2 === 1) {
+
+        let rectangle4 = document.createElement('div')
+        rectangle4.className = 'rectangle'
+        rectangle4.style.background = 'red'
+        rectangle4.style.height = '20px'
+        rectangle4.style.width = sampleArray[index] + 'px'
+        rectangle4.style.margin = '2px'
+        mainElement.append(rectangle4)
+    } else {
+        let rectangle4 = document.createElement('div')
+        rectangle4.className = 'rectangle'
+        rectangle4.style.background = 'gray'
+        rectangle4.style.height = '20px'
+        rectangle4.style.width = sampleArray[index] + 'px'
+        rectangle4.style.margin = '2px'
+        mainElement.append(rectangle4)
+    }
+}
+
+const kata23Heading = document.createElement('h1')
+kata23Heading.append('Kata 23')
+mainElement.append(kata23Heading)
+
+for (let index = 0; index < sampleArray.length; index++) {
+
+    if (sampleArray[index] % 2 === 0) {
+
+        let rectangle4 = document.createElement('div')
+        rectangle4.className = 'rectangle'
+        rectangle4.style.background = 'red'
+        rectangle4.style.height = '20px'
+        rectangle4.style.width = sampleArray[index] + 'px'
+        rectangle4.style.margin = '2px'
+        mainElement.append(rectangle4)
+    } else {
+        let rectangle4 = document.createElement('div')
+        rectangle4.className = 'rectangle'
+        rectangle4.style.background = 'gray'
+        rectangle4.style.height = '20px'
+        rectangle4.style.width = sampleArray[index] + 'px'
+        rectangle4.style.margin = '2px'
+        mainElement.append(rectangle4)
+    }
+}
